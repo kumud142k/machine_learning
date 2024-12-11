@@ -1,0 +1,200 @@
+1. AI vs DL Vs ML vs DS 
+2. Types of Machine learning --> Supervised & Unsupervised learning
+3. Independent & Dependent features
+4. SL-Regression/ Classification problems
+    * Regression---> O/p is Continuous variable
+    * Classification --> o/p is Binary/multi Classification
+5. USL- 
+
+    Clustering/Customer segmentation , 
+    No dependent variables , 
+    grouping 
+    Dimensional reduction PCA, LDA
+
+6. Types of SL 
+    - Linear Regression
+    - ridge & lassp
+    - Decision tress
+    - Adaboost
+    - Random forest
+    - Gradient boosting
+    - Xgboost
+    - Naive bayes
+    - SVM
+7. Types of USL
+    - K Means
+    - DbScan
+    - Heirarchial 
+    - KNN Clustering
+    - PCA
+    - LDA
+
+****************************************************************************************
+1. Linear Regression:
+
+    - Cost function 
+    - Best fit Line
+    - SSE, R2, Adjusted R2
+    - Why R2 is always greater than adjusted R2 ?
+
+Ridge & Lasso Regression:
+
+    - Overfitting : Model performs well with training data(low bias) but
+     fails to perform well over test data(high variance)
+    - Underfitting : Model accuracy is bad with training data(high bias) and
+     also performs bad/ bad accuracy with test data(high variance)
+    
+    * Ridge (L2 regularization)
+        - Prevent overfitting 
+        - Slope should not be steep
+        - Cost function= cost_func + lambda(slope)^2
+        - iterations(hyper parameter)
+
+    * Lasso (L1 regularization)
+        - mode of slope, lambda*|slope|
+        - preventing overfitting
+        - feature selection
+
+    Assumptions of Linear Regression::
+        - Normal/Gaussian distribution -> model get trained well
+        - Standardisation {scaling data}- > Z -score, 
+        - Linearity 
+        - Multi Collinearity (Variation Inflation factor)
+
+    *******************************************************************************************
+
+    2. Logistic Regression (Classification)
+
+        - Sigmoid function / Logistic function
+        - linear reg cannot be used Handling outliers (pass/fail)
+        - Binary Classification problem {0, 1}
+        - l1 and l2 , C 
+
+    # Cost function is always convex function because non convex function has local minimas. 
+        For Logistic regression we have separate cost function:
+        Expression ~ -ylog(h(ox))-(1-y)log(1-h(ox)), 
+            where h(ox) is the sigmoid function 
+
+    # Confusion matrix
+        - TP,  FP, TN , FP 
+        accuracy = (TP+TN)/(TP+TN+FP+FN)
+        Precision/False positive rate = TP/(TP+FP) 
+        Recall/True positive rate/sensitivity = TP/(TP+FN)
+        F-score = 
+    ---> Spam classification:: Precision
+    ---> Has cancer or not :: Recall 
+
+    
+3. Naive Bayes 
+    - based on bayes theorem 
+
+
+4. KNN 
+
+5. Decision trees
+
+    - Regression 
+    - Classification problems can be solved
+     - Decision tress are  cretaed in form of "nodes"
+     - Nested if else conditions
+
+    * Pure split & Impure split in nodes 
+    * leaf node which is completely pure 
+    * how to calculate purity in leaf nodes ? 
+        - Entropy
+            H(s)= -plogp+ - plogp_
+
+            p+ --> Probability of YES
+            p_ --> Probability of NO 
+
+            If entropy is zero-- pure split
+            If entropy is 1 -- Impure split
+
+        - Ginni coefficient 
+            G.I= 1- sigma (p**2)
+
+    * How the features are selected?
+        - Information gain? if information gain is more of a feature then we will start with that feature 
+        for splitting
+        -Ginni Impurity 
+            G.I= 1 - summation(p**2)
+    
+    Decision Tree Regressor:::
+
+        - MSE/ MAE (Mean squared eeror, mean absolute error)
+        
+        Hyperparameter::
+
+6. Ensembled techniques
+    * Bagging
+        -> Random forest classifier
+        -> Random forest regressor
+        -> Custom bagging 
+    * Boosting 
+        -> Adaboost
+        -> Gradient boostin
+        -> XGboost
+
+Random forest classifier & regressor::
+    - Decision Tree leads to overfitting without any Hyperparameter
+    - row sampling, feature sampling, 
+    - we combine all the weak decison trees to give low bias and low variance model 
+    - Normalization required in random forest pr decison trees ? No, the split is not that much important 
+        in KNN Standardisation normalization is required bux of euclidean, manhattan distance. 
+    - Is random forest impacted by outliers? --> No
+
+Boosting Techniques::
+    - Adaboost
+        - 1 level weak learner , Stump
+        -  total error, performance of stump  and new sample weights 
+    
+
+B) Unsupervised Learning::
+
+-> No specific output
+-> Clusters of same kind of data
+
+    * K means clustering 
+    * Heirarchial clustering
+    * Silhoute score
+    * DbScan clustering
+
+1. K-Means Clustering ::
+
+    - in K means--> K is centroid 
+    - we try with different K (centroid) values, we initialise K number of centroids
+    - compute the average to update centroids
+
+    - Elbow menthod of determining K value
+        - iteration curve between K value and wcss (within Clusters sum of squares)
+
+2. Heirarchial Clustering 
+    - Dendogram 
+    - we need to find the longest vertical line that has no horizontal line pass through it
+        to find the number of Clusters
+    - Which takes maximum time K means or Heirarchial clustering ? Heirarchial clustering will take time if 
+        we have many data points
+
+3. How to Validate clustering ?
+    - Silhoute score 
+
+4. DbScan Clustering (density-based Clustering of applications with Noise)
+
+    - epsilon (radius of circle)
+    - Core points 
+    - min points
+    - Border points
+    - noise points
+
+Definition of Bias & Variance:::
+
+    - Low bias---> training data
+    - Variance---> test dataset
+
+    Bias::: is a phenomenon thats kews the result of an algorithm in favour or against an idea.(training dataset)
+
+    Variance::: refers to the changes in the model when using different portions of the training 
+                or test data
+                
+
+
