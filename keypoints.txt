@@ -197,4 +197,15 @@ Definition of Bias & Variance:::
                 or test data
                 
 
+XGboost Classifier::  Black box model 
+
+    - Extreme gradient boosting 
+    - Base model 
+    - Create a binary decision tree
+    `- Calculate the similarity weight
+            = sigma(resifual)**2/
+    - Calculate information gain 
+
+
+
 
