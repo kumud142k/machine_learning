@@ -202,10 +202,20 @@ XGboost Classifier::  Black box model
     - Extreme gradient boosting 
     - Base model 
     - Create a binary decision tree
-    `- Calculate the similarity weight
+    - Calculate the similarity weight
             = sigma(resifual)**2/
     - Calculate information gain 
 
 
 
+XGboost regressor:: 
 
+    - Create base model 
+    - Information gain 
+    - 
+
+SVM :::
+
+    - Major aim of SVM is to create marginal planes, hyperplane (midline plane)
+    - soft marginal plane 
+    - 
