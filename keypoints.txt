@@ -218,4 +218,9 @@ SVM :::
 
     - Major aim of SVM is to create marginal planes, hyperplane (midline plane)
     - soft marginal plane 
-    - 
+    - SVM kernel, to seaparate points by planes in 3-d models 
+
+Explore SVR :::
+    - urself
+
+    
